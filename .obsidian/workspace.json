@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "d091daf738816b15",
+    "type": "split",
+    "children": [
+      {
+        "id": "03efe2adc47b5ba4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "47c788315dd121c6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nova aba"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e88c3c23f65f6565",
+    "type": "split",
+    "children": [
+      {
+        "id": "c134086bfc3a38f2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e837af37565f22ed",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "00ac43444ee9182e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "26ca56babcbd668b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "907d6a567b8b263a",
+    "type": "split",
+    "children": [
+      {
+        "id": "5962ed22cc0ffa3a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "194a263f997717b0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "d0e099572a419fc8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída"
+            }
+          },
+          {
+            "id": "e91953e74b876a91",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "cffebd160af56617",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Sumário"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false
+    }
+  },
+  "active": "47c788315dd121c6",
+  "lastOpenFiles": [
+    "Documento de Abertura do Projeto.md",
+    "Autenticação/Login.md",
+    "Autenticação/Registro.md",
+    "assets/HireConnectDrawio.png",
+    "Autenticação/Obter Dados do Usuário Logado.md",
+    "Utilitários/Usuários/Tipos de Usuário.md",
+    "Pasted image 20241101123314.png",
+    "Utilitários/Usuários",
+    "canvas/Sem título.canvas",
+    "Utilitários",
+    "Autenticação",
+    "Welcome.md",
+    "Sem título.canvas",
+    "Essa tabela.md",
+    "assets/HireConnect.drawio.png",
+    "assets/SCR-20240927-nzag.png",
+    "SCR-20240927-nzag.png",
+    "HireConnect.drawio",
+    "assets/Sem título",
+    "assets",
+    "heri.jpeg",
+    "canvas"
+  ]
+}
