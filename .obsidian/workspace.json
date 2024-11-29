@@ -1,37 +1,56 @@
 {
   "main": {
-    "id": "d091daf738816b15",
+    "id": "5064aa559be8e2ee",
     "type": "split",
     "children": [
       {
-        "id": "03efe2adc47b5ba4",
+        "id": "259b2a3d97ec2fe8",
         "type": "tabs",
         "children": [
           {
-            "id": "47c788315dd121c6",
+            "id": "0d6780a0822dd6ee",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Documento de Abertura do Projeto.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "Documento de Abertura do Projeto"
+            }
+          },
+          {
+            "id": "77317bdb88181c19",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IdeiasDeImplementações.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "IdeiasDeImplementações"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "e88c3c23f65f6565",
+    "id": "72a77b071bc74f65",
     "type": "split",
     "children": [
       {
-        "id": "c134086bfc3a38f2",
+        "id": "1b7ca745b32eff43",
         "type": "tabs",
         "children": [
           {
-            "id": "e837af37565f22ed",
+            "id": "aebff546515f3f2f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +62,7 @@
             }
           },
           {
-            "id": "00ac43444ee9182e",
+            "id": "86d9c805ac5af999",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -60,7 +79,7 @@
             }
           },
           {
-            "id": "26ca56babcbd668b",
+            "id": "3dbdf22e64afb966",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -73,22 +92,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 303.5
   },
   "right": {
-    "id": "907d6a567b8b263a",
+    "id": "aacad8d9664b5b6c",
     "type": "split",
     "children": [
       {
-        "id": "5962ed22cc0ffa3a",
+        "id": "e320aec5bcc30632",
         "type": "tabs",
         "children": [
           {
-            "id": "194a263f997717b0",
+            "id": "3daed56c07664164",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ERP/Modules/Academic/Essay/Essay.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,24 +118,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Links inversos para Essay"
             }
           },
           {
-            "id": "d0e099572a419fc8",
+            "id": "8eb47b73412ae8f5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "ERP/Modules/Academic/Essay/Essay.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída"
+              "title": "Links de saída para Essay"
             }
           },
           {
-            "id": "e91953e74b876a91",
+            "id": "fe201f584bfe5d1e",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -128,55 +149,175 @@
             }
           },
           {
-            "id": "cffebd160af56617",
+            "id": "5c27b99f0dcc541a",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "ERP/Modules/Academic/Essay/Essay.md"
+              },
               "icon": "lucide-list",
-              "title": "Sumário"
+              "title": "Sumário de Essay"
+            }
+          },
+          {
+            "id": "20b3331dbdcdfc74",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "8085cce5aac8df06",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "846abe5fb2483f5d",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          },
+          {
+            "id": "16efef4fd51831d1",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "API/Setup Geral/Alocação/Rotas/Atrelar Professor à Matéria.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.32948735280320146,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Gráfico de Atrelar Professor à Matéria"
+            }
+          },
+          {
+            "id": "a8fef07e80ee0bae",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 263.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-kanban:Criar um novo quadro": false,
       "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
       "canvas:Criar novo canvas": false,
       "daily-notes:Abrir a nota de hoje": false,
       "templates:Inserir modelo": false,
-      "command-palette:Abrir paleta de comandos": false
+      "command-palette:Abrir paleta de comandos": false,
+      "obsidian-projects:Open projects": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "47c788315dd121c6",
+  "active": "77317bdb88181c19",
   "lastOpenFiles": [
     "Documento de Abertura do Projeto.md",
-    "Autenticação/Login.md",
+    "IdeiasDeImplementações.md",
+    "Empresa/Cadastrar uma Empresa.md",
     "Autenticação/Registro.md",
-    "assets/HireConnectDrawio.png",
     "Autenticação/Obter Dados do Usuário Logado.md",
-    "Utilitários/Usuários/Tipos de Usuário.md",
-    "Pasted image 20241101123314.png",
-    "Utilitários/Usuários",
-    "canvas/Sem título.canvas",
+    "Autenticação/Login.md",
+    "API/Matricula/Routes/Finantial/UpdateContractStudent.md",
+    "API/Setup Geral/Alocação/Fluxo.canvas",
+    "API/Setup Geral/Alocação/Rotas/Atualizar Cronograma Semanal.md",
+    "API/Setup Geral/Alocação/Rotas/Lista de Professores.md",
+    "API/Setup Geral/Alocação/Rotas/Substituir Alocação do Professor.md",
+    "API/Setup Geral/Alocação/Rotas/Visualizar Cronograma Semanal.md",
+    "Utilitários/Unidades.md",
+    "API/ExtraCurricular/Routes/Candidates/GetCandidatesCTByStudentId.md",
+    "API/ExtraCurricular/Routes/Candidates/GetCandidatesCT.md",
+    "API/Redacao/Routes/Correction.md",
+    "README.md",
+    "ExternalDocs/HTTP/Guia de HTTP em APIs Web. Como Funcionam as Requisições e Parâmetros.md",
+    "ExternalDocs/Git/Git Octopus.md",
+    "ExternalDocs/Git/tags/About Git Tags.md",
+    "ExternalDocs/Git/tags/change_to_versions.md",
+    "ExternalDocs/Git/ssh/About SHH.md",
+    "ExternalDocs/Git/remote/about Remote.md",
+    "ExternalDocs/Git/rebase/About Rebase.md",
+    "ExternalDocs/Git/merge/pull-push.md",
+    "ExternalDocs/Git/merge/About Merge.md",
+    "ExternalDocs/Git/commitFlow/About commit flow.md",
+    "ExternalDocs/HTTP",
     "Utilitários",
-    "Autenticação",
-    "Welcome.md",
-    "Sem título.canvas",
-    "Essa tabela.md",
-    "assets/HireConnect.drawio.png",
-    "assets/SCR-20240927-nzag.png",
-    "SCR-20240927-nzag.png",
-    "HireConnect.drawio",
-    "assets/Sem título",
-    "assets",
-    "heri.jpeg",
-    "canvas"
+    "API/Setup Geral/Alocação/Rotas",
+    "API/Setup Geral/Alocação",
+    "API/Setup Geral",
+    "Pasted image 20241015144205.png",
+    "Sem título",
+    "ERP/Modules/Academic/Essay/components/Modals/Tema/Fluxo de modal de temas de redação.canvas",
+    "ERP/Modules/Academic/Essay/Pages/Area de temas/AreaThemeFlux.canvas",
+    "ERP/Modules/Academic/Essay/components/Modals/Temas/Fluxo de modal de temas de redação.canvas",
+    "ERP/Modules/Academic/Essay/components/Modals/Tema/assets/viewTheme.png",
+    "ERP/Modules/Academic/Essay/components/Modals/Tema/assets/viewEditTheme.png",
+    "ERP/Modules/Academic/Essay/components/Modals/Tema/assets/viewEditTheme-enable.png",
+    "ERP/Modules/Academic/Essay/components/Modals/Tema/assets/editTheme.png",
+    "ERP/Modules/Academic/Essay/components/Modals/Tema/assets/deleteTheme.png",
+    "ERP/Modules/Academic/Essay/components/Modals/Tema/assets",
+    "ERP/Modules/Academic/Essay/components/Modals/Tema",
+    "ERP/Modules/Academic/Essay/components/Modals/Aplicação",
+    "ERP/Modules/Academic/Essay/Pages/Area de temas/assets/cardTheme.png",
+    "ERP/Modules/Academic/Essay/Pages/Area de temas/assets/ViewThemes.png",
+    "ERP/Modules/Academic/Essay/Pages/Area de temas/assets/CreateThemeEssay.png",
+    "ERP/Modules/Academic/Essay/Pages/Aplicação/assets/Application.png",
+    "ERP/Modules/Academic/Essay/Pages/Aplicação/assets",
+    "ERP/Modules/Academic/Essay/pages-flux.canvas",
+    "ERP/Modules/Shared/StudentInfo/Tabs/Responsibles/Fluxograms/Page-view-flux.canvas",
+    "ERP/Modules/Shared/StudentInfo/Tabs/Responsibles/Fluxograms/Flux-general-responsibles.canvas",
+    "ERP/Modules/Academic/Essay-old/pages-flux.canvas",
+    "Untitled.canvas"
   ]
 }

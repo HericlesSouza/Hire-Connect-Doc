@@ -1,0 +1,8 @@
+{
+  "pinned": [
+    "graph:open-local",
+    "obsidian-git:create-branch",
+    "obsidian-git:pull",
+    "obsidian-git:commit-staged"
+  ]
+}

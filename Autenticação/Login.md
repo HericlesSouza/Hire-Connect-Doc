@@ -29,8 +29,7 @@ Esta rota permite o login de um usuário existente no sistema. Através do méto
 
 ### Exemplo de Resposta
 #### Sucesso - `200 OK`
-Se o login for bem-sucedido, a resposta incluirá um token de autenticação:
-```json
+ ```json
 { 
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
 	"user": {
@@ -44,7 +43,8 @@ Se o login for bem-sucedido, a resposta incluirá um token de autenticação:
 ```
 
 ### Exceções
-#### Erro de Validação - `400 Bad Request`
+
+#### Erro de Validação - **400 Bad Request**
 Caso algum parâmetro esteja incorreto ou falte um campo obrigatório, por exemplo:
 ```json
 {
@@ -58,7 +58,7 @@ Caso algum parâmetro esteja incorreto ou falte um campo obrigatório, por exemp
 }
 ```
 
-#### Credenciais Inválidas - `401 Unauthorized`
+#### Credenciais Inválidas - **401 Unauthorized**
 Caso o e-mail ou senha estejam incorretos, a resposta será:
 ```json
 {

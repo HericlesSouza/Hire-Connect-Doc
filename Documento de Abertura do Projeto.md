@@ -1,5 +1,4 @@
-**HireConnect** HireConnect é uma plataforma projetada para conectar empresas e freelancers de forma rápida, eficiente e segura. O sistema permite que empresas publiquem vagas, gerenciem seus departamentos e contratem freelancers qualificados, enquanto os freelancers têm a oportunidade de se candidatar a vagas que atendam suas especializações, tudo em um ambiente intuitivo e integrado.
-
+**HireConnect** é uma plataforma projetada para conectar empresas e freelancers de forma rápida, eficiente e segura. O sistema permite que empresas publiquem vagas, gerenciem seus departamentos e contratem freelancers qualificados, enquanto os freelancers têm a oportunidade de se candidatar a vagas que atendam suas especializações, tudo em um ambiente intuitivo e integrado.
 ### Rotas de Autenticação
 
 - **POST /auth/register**: Cadastro de usuário, definindo o tipo de conta (freelancer, empresa ou admin).
@@ -7,8 +6,6 @@
 - **POST /auth/login**: Login do usuário.
     
 - **GET /auth/me**: Retorna os dados do usuário logado.
-    
-
 ### Rotas para Empresa
 
 - **POST /company**: Cadastro de uma nova empresa (restrito ao usuário tipo COMPANY).
@@ -19,7 +16,6 @@
     
 - **DELETE /company/{companyId}**: Deleta a empresa (restrito ao dono).
     
-
 ### Rotas Relacionadas a Departamentos
 
 - **POST /company/{companyId}/department**: Criar um novo departamento na empresa.

@@ -1,11 +1,22 @@
 {
+  "Appearance-light@@mod-left-split-background-select-light": "mod-left-split-background-primary-light",
+  "Appearance-dark@@card-layout-open-dark": true,
+  "Appearance-dark@@theme-dark-style-select": "theme-dark-background-black",
+  "Editor@@border-focus-mode": false,
+  "Editor@@line-normal-opacity": 0.4,
   "Components@@tab-autohide": false,
   "Components@@status-bar-autohide": true,
   "Components@@Ribbon-autohide": true,
   "Components@@nav-header-autohide": false,
   "Components@@tab-title-bar-autohide": true,
-  "Components@@vault-profile-autohide": false,
+  "Components@@CTA-BTN-enable": false,
   "Components@@folder-font-bold": true,
-  "Appearance-light@@card-layout-open-light": true,
-  "Appearance-dark@@card-layout-open-dark": true
+  "Components@@file-icon-remove": false,
+  "Components@@colorful-folder": false,
+  "Appearance-dark@@accent-color-override-dark": true,
+  "Appearance-dark@@accent-dark": "#9D76CF",
+  "Plugin@@colorful-checkbox": false,
+  "Components@@file-names-untrim": false,
+  "Components@@setting-item-title-icon-remove": false,
+  "Appearance-light@@card-layout-open-light": true
 }
