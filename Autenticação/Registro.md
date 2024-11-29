@@ -7,8 +7,12 @@
 | método   | __POST__                           |
 | corpo    | [PAYLOAD](#Exemplo%20De%20Payload) |
 
+---
+
 ### Descrição
 Esta rota permite o registro de um novo usuário no sistema. Através do método `POST` no endpoint `/auth/register`, é possível enviar os dados necessários para a criação de um perfil de usuário com o tipo e permissões apropriadas.
+
+---
 
 ### Exemplo de Payload (Request Body):
 #### Registro de um usuário
@@ -34,6 +38,7 @@ Esta rota permite o registro de um novo usuário no sistema. Através do método
 | `img_url`  | `string`                                                    | URL para a imagem de perfil do usuário. Campo opcional, podendo conter até 2000 caracteres.                                 | Opcional            |
 | `type`     | [UserRole](../Utilitários/Usuários/Tipos%20de%20Usuário.md) | Define o perfil de acesso e categoria do usuário no sistema. Deve corresponder a um dos valores predefinidos em *UserRole*. | *Obrigatório*       |
 
+---
 ### Exemplo de Resposta
 
 #### Sucesso - `201 Created`
@@ -49,6 +54,7 @@ Se o registro for bem-sucedido, a resposta será:
 }
 ```
 
+---
 ### Exceções
 #### Erro de Validação - `400 Bad Request`
 Caso algum parâmetro esteja incorreto ou falte um campo obrigatório, por exemplo:
@@ -77,5 +83,6 @@ Se o e-mail fornecido já estiver em uso por outro usuário, a resposta será:
 }
 ```
 
+---
 #### Notas Adicionais
 Esta rota utiliza JWT (JSON Web Token) para autenticação e autorização nas requisições futuras. Após o registro, o usuário poderá fazer login para acessar funcionalidades específicas com base em seu tipo de conta.

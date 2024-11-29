@@ -7,9 +7,11 @@
 | método    | **GET**                         |
 | cabeçalho | `Authorization: Bearer <token>` |
 
+---
 ### Descrição
 Esta rota permite que o usuário autenticado obtenha seus próprios dados, retornando informações básicas do perfil.
 
+---
 ### Requisitos
 - **Autenticação**: O usuário deve estar autenticado. O token JWT válido deve ser incluído no cabeçalho da requisição.
 
@@ -19,6 +21,7 @@ GET /auth/me
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
+---
 ### Exemplo de Resposta
 #### Sucesso - `200 OK`
 Se a autenticação for bem-sucedida, a resposta incluirá os dados do usuário:
@@ -34,6 +37,7 @@ Se a autenticação for bem-sucedida, a resposta incluirá os dados do usuário:
 }
 ```
 
+---
 ### Exceções
 #### Falha de Autenticação - `401 Unauthorized`
 Se o token JWT estiver ausente ou inválido, a resposta indicará que a autenticação é necessária:
@@ -45,6 +49,7 @@ Se o token JWT estiver ausente ou inválido, a resposta indicará que a autentic
 }
 ```
 
+---
 ### Notas Adicionais
 - **Campos Retornados**: A resposta inclui apenas dados públicos e relevantes do perfil, excluindo informações sensíveis, como a senha.
 - **Uso do Token JWT**: O token JWT fornecido no login deve ser utilizado para acessar essa rota. A resposta retornará os dados do usuário associado ao token.

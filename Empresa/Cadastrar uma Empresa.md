@@ -7,9 +7,11 @@
 | cabeçalho | `Authorization: Bearer <token>`           |
 | corpo     | [PAYLOAD](#Cadastro%20de%20uma%20empresa) |
 
+---
 ### Descrição 
 Este endpoint permite que usuários autenticados do tipo **COMPANY** registrem uma nova empresa no sistema. Após o registro, o usuário será automaticamente vinculado como proprietário da empresa criada.
 
+---
 ### Exemplo de Payload (Request Body):
 #### Cadastro de uma empresa
 
@@ -27,6 +29,7 @@ Este endpoint permite que usuários autenticados do tipo **COMPANY** registrem u
 | `name`        | `string` | Nome da empresa.      | _Obrigatório_       |
 | `description` | `string` | Descrição da empresa. | _Obrigatório_       |
 
+---
 ### Exemplo de Resposta
 
 #### Sucesso - `201 Created`
@@ -46,6 +49,7 @@ Este endpoint permite que usuários autenticados do tipo **COMPANY** registrem u
 }
 ```
 
+---
 ### Exceções
 #### Erro de Validação - **400 Bad Request**
 Caso algum parâmetro esteja incorreto ou falte um campo obrigatório, por exemplo:

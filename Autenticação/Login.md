@@ -7,9 +7,11 @@
 | method   | __POST__                           |
 | body     | [PAYLOAD](#Exemplo%20De%20Payload) |
 
+---
 ### Descrição
 Esta rota permite o login de um usuário existente no sistema. Através do método `POST` no endpoint `/auth/login`, é possível enviar as credenciais do usuário para autenticação. O sistema retorna um token JWT *(JSON Web Token)* para autenticação nas requisições futuras.
 
+---
 ### Exemplo de Payload (Request Body):
 
 #### Login de um usuário
@@ -27,6 +29,7 @@ Esta rota permite o login de um usuário existente no sistema. Através do méto
 | `email`    | `string` | Endereço de e-mail do usuário. Deve ser válido e já cadastrado.     | _Obrigatório_       |
 | `password` | `string` | Senha do usuário. Deve coincidir com a senha cadastrada no sistema. | _Obrigatório_       |
 
+---
 ### Exemplo de Resposta
 #### Sucesso - `200 OK`
  ```json
@@ -42,6 +45,7 @@ Esta rota permite o login de um usuário existente no sistema. Através do méto
 }
 ```
 
+---
 ### Exceções
 
 #### Erro de Validação - **400 Bad Request**
@@ -71,6 +75,7 @@ Caso o e-mail ou senha estejam incorretos, a resposta será:
 }
 ```
 
-#### Notas Adicionais
+---
+### Notas Adicionais
 - **Token JWT**: O token JWT retornado deve ser incluído no cabeçalho de autorização (`Authorization: Bearer <token>`) nas requisições subsequentes para garantir acesso autorizado a rotas protegidas.
 - **Expiração do Token**: O token tem um tempo de expiração de 1 dia, após o qual será necessário fazer login novamente.

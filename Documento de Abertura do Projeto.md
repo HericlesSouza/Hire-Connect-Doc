@@ -1,6 +1,6 @@
 **HireConnect** é uma plataforma projetada para conectar empresas e freelancers de forma rápida, eficiente e segura. O sistema permite que empresas publiquem vagas, gerenciem seus departamentos e contratem freelancers qualificados, enquanto os freelancers têm a oportunidade de se candidatar a vagas que atendam suas especializações, tudo em um ambiente intuitivo e integrado.
 ### Rotas de Autenticação
-
+test teste
 - **POST /auth/register**: Cadastro de usuário, definindo o tipo de conta (freelancer, empresa ou admin).
     
 - **POST /auth/login**: Login do usuário.
