@@ -82,7 +82,3 @@ Se o e-mail fornecido já estiver em uso por outro usuário, a resposta será:
 	"timestamp": "2024-09-19T16:47:24.284168"
 }
 ```
-
----
-#### Notas Adicionais
-Esta rota utiliza JWT (JSON Web Token) para autenticação e autorização nas requisições futuras. Após o registro, o usuário poderá fazer login para acessar funcionalidades específicas com base em seu tipo de conta.
