@@ -43,9 +43,12 @@ Se a autenticação for bem-sucedida, a resposta incluirá os dados do usuário:
 Se o token JWT estiver ausente ou inválido, a resposta indicará que a autenticação é necessária:
 ```json
 {
-  "status": 401,
-  "message": "Unauthorized - Token is missing or invalid",
-  "timestamp": "2024-10-10T10:10:00Z"
+	"status": 401,
+	"message": "Access denied. Please ensure your token is correct and active.",
+	"errors": [
+		"Full authentication is required to access this resource"
+	],
+	"timestamp": "2024-12-28T21:02:07.806367"
 }
 ```
 
