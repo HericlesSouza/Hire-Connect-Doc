@@ -80,10 +80,9 @@ Caso o token de autenticação seja inválido ou esteja ausente:
 Caso o usuário não seja o dono da empresa ou um administrador:
 ```json
 {
-  "status": 403,
-  "message": "Forbidden",
-  "details": "You do not have permission to update this company.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 403,
+	"message": "Access denied: You do not have permission to access this resource.",
+	"timestamp": "2024-12-30T18:44:33.512614"
 }
 ```
 

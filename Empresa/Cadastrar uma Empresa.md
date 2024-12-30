@@ -38,7 +38,7 @@ Este endpoint permite que usuários autenticados do tipo **COMPANY** registrem u
 	"id": 12345, 
 	"name": "Empresa Exemplo",
 	"description": "contato@empresaexemplo.com",
-	"user": {
+	"owner": {
 		"id": 12345, 
 		"name": "João Silva", 
 		"email": "joao.silva@example.com", 
@@ -64,15 +64,28 @@ Caso algum parâmetro esteja incorreto ou falte um campo obrigatório, por exemp
 }
 ```
 
+#### Erro de Empresa Associada - **400 Bad Request**
+Caso o usuário já tenha uma empresa associada a ele:
+```json
+{
+	"status": 400,
+	"message": "User already has a company associated",
+	"timestamp": "2024-12-29T23:50:11.827065"
+}
+```
+
+
 #### Erro de Autorização - **401 Unauthorized**
 Caso o token de autenticação não seja válido ou esteja ausente, o sistema retornará o seguinte erro:
 
 ```json
 {
 	"status": 401,
-	"message": "Unauthorized",
-	"details": "You must be authenticated to access this resource.",
-	"timestamp": "2024-09-19T16:38:25.309715"
+	"message": "Access denied. Please ensure your token is correct and active.",
+	"errors": [
+		"Full authentication is required to access this resource"
+	],
+	"timestamp": "2024-12-29T23:31:45.900211"
 }
 ```
 

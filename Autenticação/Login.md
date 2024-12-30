@@ -36,10 +36,13 @@ Esta rota permite o login de um usuário existente no sistema. Através do méto
 { 
 	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
 	"user": {
-		"id": 12345,
+		"id": "664f336b-50a4-4aed-81cf-22528273af42",
 		"name": "João Silva",
 		"email": "joao.silva@example.com",
-		"type": "FREELANCER"
+		"imgUrl": null,
+		"typeUser": "FREELANCER"
+		"createdAt": "2024-12-27T20:49:36.892084",
+		"updatedAt": null
 	},
 	"expiresAt": "2024-11-01T14:00:00Z"
 }
