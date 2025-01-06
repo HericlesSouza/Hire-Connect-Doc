@@ -49,10 +49,12 @@ Se a requisição for bem-sucedida, a resposta conterá as informações da empr
 Caso o token de autenticação seja inválido ou esteja ausente:
 ```json
 {
-  "status": 401,
-  "message": "Unauthorized",
-  "details": "You must be authenticated to access this resource.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 401,
+	"message": "Access denied. Please ensure your token is correct and active.",
+	"errors": [
+		"Full authentication is required to access this resource"
+	],
+	"timestamp": "2025-01-03T19:29:19.211155"
 }
 ```
 

@@ -38,13 +38,16 @@ Este endpoint permite que usuários autenticados do tipo **COMPANY** registrem u
 	"id": 12345, 
 	"name": "Empresa Exemplo",
 	"description": "contato@empresaexemplo.com",
+	"createdAt": "2025-01-03T19:09:36.590708",
+	"updatedAt": null,
 	"owner": {
 		"id": 12345, 
 		"name": "João Silva", 
 		"email": "joao.silva@example.com", 
 		"img_url": "https://example.com/profile.jpg", 
-		"type": "COMPANY", 
-		"createdAt": "2024-11-01T12:00:00Z" 
+		"typeUser": "COMPANY",
+		"createdAt": "2024-12-26T20:51:45.099723",
+		"updatedAt": null
 	}
 }
 ```
@@ -94,9 +97,8 @@ Caso o usuário não tenha permissão suficiente para realizar a operação (por
 
 ```json
 {
-  "status": 403,
-  "message": "Forbidden",
-  "details": "You do not have permission to access this resource.",
-  "timestamp": "2024-09-19T16:38:25.309715"
+	"status": 403,
+	"message": "Access denied: You do not have permission to access this resource.",
+	"timestamp": "2025-01-03T18:56:22.315201"
 }
 ```

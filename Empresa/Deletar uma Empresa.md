@@ -2,24 +2,16 @@
 
 ### Propriedades
 
-|endpoint|`/company/{companyId}`|
-|---|---|
-|método|**DELETE**|
-|cabeçalho|`Authorization: Bearer <token>`|
+| endpoint  | `/company`                      |
+| --------- | ------------------------------- |
+| método    | **DELETE**                      |
+| cabeçalho | `Authorization: Bearer <token>` |
 
 ---
 
 ### Descrição
 
-Esta rota permite excluir uma empresa específica do sistema. Apenas o dono da empresa (usuário autenticado) pode realizar esta operação. O identificador único da empresa (`companyId`) deve ser fornecido como parte da URL. Ao excluir a empresa, todos os dados associados a ela serão removidos permanentemente.
-
----
-
-### Parâmetros da Rota
-
-|**Parâmetro**|**Tipo**|**Descrição**|**Obrigatoriedade**|
-|---|---|---|---|
-|`companyId`|`string`|Identificador único da empresa (UUID).|_Obrigatório_|
+Esta rota permite excluir uma empresa específica do sistema. Apenas o dono da empresa (usuário autenticado) pode realizar esta operação. Ao excluir a empresa, todos os dados associados a ela serão removidos permanentemente.
 
 ---
 
@@ -39,34 +31,22 @@ Se a empresa for excluída com sucesso, a resposta será:
 Caso o token de autenticação seja inválido ou esteja ausente:
 ```json
 {
-  "status": 401,
-  "message": "Unauthorized",
-  "details": "You must be authenticated to access this resource.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 401,
+	"message": "Access denied. Please ensure your token is correct and active.",
+	"errors": [
+		"Full authentication is required to access this resource"
+	],
+	"timestamp": "2025-01-06T13:17:39.154240"
 }
 ```
-
-
-#### Permissão Negada - **403 Forbidden**
-Caso o usuário não seja o dono da empresa, o sistema retornará um erro de permissão:
-```json
-{
-  "status": 403,
-  "message": "Forbidden",
-  "details": "You do not have permission to delete this company.",
-  "timestamp": "2024-11-22T16:38:25.309715"
-}
-```
-
 
 #### Empresa Não Encontrada - **404 Not Found**
 Caso o `companyId` fornecido não corresponda a nenhuma empresa cadastrada:
 ```json
 {
-  "status": 404,
-  "message": "Company not found",
-  "details": "The company with the given ID does not exist.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 404,
+	"message": "This user does not have any company associated with them.",
+	"timestamp": "2025-01-06T13:19:00.926265"
 }
 ```
 

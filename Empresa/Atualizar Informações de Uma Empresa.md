@@ -2,7 +2,7 @@
 
 ### Propriedades
 
-| endpoint  | `/company/{companyId}`                                                          |
+| endpoint  | `/company`                                                                      |
 | --------- | ------------------------------------------------------------------------------- |
 | método    | **PATCH**                                                                       |
 | cabeçalho | `Authorization: Bearer <token>`                                                 |
@@ -11,15 +11,7 @@
 ---
 
 ### Descrição
-Esta rota permite atualizar informações de uma empresa existente no sistema. Apenas o dono da empresa (usuário autenticado) ou um administrador podem realizar essa operação. O identificador único da empresa (`companyId`) deve ser fornecido como parte da URL.
-
----
-
-### Parâmetros da Rota
-
-|**Parâmetro**|**Tipo**|**Descrição**|**Obrigatoriedade**|
-|---|---|---|---|
-|`companyId`|`string`|Identificador único da empresa (UUID).|_Obrigatório_|
+Esta rota permite atualizar informações de uma empresa existente no sistema. Apenas o dono da empresa (usuário autenticado) pode realizar essa operação. Automaticamente atualizará a `empresa` associada ao usuário autenticado.
 
 ---
 
@@ -46,19 +38,20 @@ Se a atualização for bem-sucedida, a resposta conterá os dados atualizados da
 
 ```json
 {
-  "id": "123e4567-e89b-12d3-a456-426614174000",
-  "name": "Empresa Exemplo",
-  "description": "Uma empresa especializada em tecnologia.",
-  "owner": {
-		"id": 12345, 
-		"name": "João Silva", 
-		"email": "joao.silva@example.com", 
-		"img_url": "https://example.com/profile.jpg", 
-		"type": "COMPANY", 
-		"createdAt": "2024-11-01T12:00:00Z" 
-  },
-  "createdAt": "2024-11-22T14:00:00Z",
-  "updatedAt": "2024-11-22T16:00:00Z"
+	"id": "80d56980-4a70-4f87-831d-d8eabf677a81",
+	"name": "Novo Nome da Empresa",
+	"description": "Nova descrição para a empresa.",
+	"createdAt": "2025-01-03T19:09:36.590708",
+	"updatedAt": "2025-01-03T20:27:24.099356",
+	"owner": {
+		"id": "fd764e4f-c99c-4f69-a0bc-357ae5154d8c",
+		"name": "João Silva",
+		"email": "joao.silva@example.com",
+		"imgUrl": "https://example.com/profile.jpg",
+		"typeUser": "COMPANY",
+		"createdAt": "2024-12-26T20:51:45.099723",
+		"updatedAt": null
+	}
 }
 ```
 
@@ -69,31 +62,22 @@ Se a atualização for bem-sucedida, a resposta conterá os dados atualizados da
 Caso o token de autenticação seja inválido ou esteja ausente:
 ```json
 {
-  "status": 401,
-  "message": "Unauthorized",
-  "details": "You must be authenticated to access this resource.",
-  "timestamp": "2024-11-22T16:38:25.309715"
-}
-```
-
-#### Permissão Negada - **403 Forbidden**
-Caso o usuário não seja o dono da empresa ou um administrador:
-```json
-{
-	"status": 403,
-	"message": "Access denied: You do not have permission to access this resource.",
-	"timestamp": "2024-12-30T18:44:33.512614"
+	"status": 401,
+	"message": "Access denied. Please ensure your token is correct and active.",
+	"errors": [
+		"Full authentication is required to access this resource"
+	],
+	"timestamp": "2025-01-03T20:29:43.251897"
 }
 ```
 
 #### Empresa Não Encontrada - **404 Not Found**
-Caso o `companyId` fornecido não corresponda a nenhuma empresa cadastrada:
+Caso o usuário autenticado não tenha nenhuma empresa vinculada.
 ```json
 {
-  "status": 404,
-  "message": "Company not found",
-  "details": "The company with the given ID does not exist.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 404,
+	"message": "This user does not have any company associated with them.",
+	"timestamp": "2025-01-03T20:44:59.865378"
 }
 ```
 
@@ -114,4 +98,4 @@ Caso algum campo do payload seja inválido ou mal formatado:
 ### Notas Adicionais
 - O token JWT deve ser incluído no cabeçalho da requisição utilizando o formato `Authorization: Bearer <token>`.
 - Apenas os campos fornecidos no payload serão atualizados. Campos não incluídos no payload permanecerão inalterados.
-- Certifique-se de que o `companyId` fornecido é um UUID válido.
+- Automaticamente atualizará a `empresa` associada ao usuário autenticado.
