@@ -51,13 +51,15 @@ Se a criação for bem-sucedida, a resposta será:
   "id": "123e4567-e89b-12d3-a456-426614174999",
   "name": "Departamento de TI",
   "description": "Responsável por gerenciar a infraestrutura de tecnologia.",
+  "createdAt": "2024-11-22T16:38:25.309715",
+  "updatedAt": null,
   "company": {
 		"id": "123e4567-e89b-12d3-a456-426614174999", 
 		"name": "Empresa Exemplo",
 		"description": "contato@empresaexemplo.com",
-  },
-  "createdAt": "2024-11-22T16:38:25.309715",
-  "updatedAt": "2024-11-22T16:38:25.309715"
+		"createdAt": "2024-11-22T16:38:25.309715",
+		"updatedAt": null
+  }
 }
 ```
 
@@ -69,21 +71,22 @@ Se a criação for bem-sucedida, a resposta será:
 Caso o token de autenticação seja inválido ou esteja ausente:
 ```json
 {
-  "status": 401,
-  "message": "Unauthorized",
-  "details": "You must be authenticated to access this resource.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 401,
+	"message": "Access denied. Please ensure your token is correct and active.",
+	"errors": [
+		"Full authentication is required to access this resource"
+	],
+	"timestamp": "2025-01-08T09:40:11.523970"
 }
 ```
 
 #### Permissão Negada - **403 Forbidden**
-Caso o usuário não seja o dono da empresa:
+Caso o usuário não seja o dono ou admin da empresa:
 ```json
 {
-  "status": 403,
-  "message": "Forbidden",
-  "details": "You do not have permission to create a department for this company.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 403,
+	"message": "Access denied: You do not have permission to access this resource.",
+	"timestamp": "2025-01-08T09:59:23.658141"
 }
 ```
 
@@ -92,7 +95,6 @@ Caso o `companyId` fornecido não corresponda a nenhuma empresa cadastrada:
 ```json
 {
   "status": 404,
-  "message": "Company not found",
   "details": "The company with the given ID does not exist.",
   "timestamp": "2024-11-22T16:38:25.309715"
 }

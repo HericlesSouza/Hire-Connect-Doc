@@ -51,10 +51,12 @@ Se a requisição for bem-sucedida, a resposta retornará uma lista com todos os
 Caso o token de autenticação seja inválido ou esteja ausente:
 ```json
 {
-  "status": 401,
-  "message": "Unauthorized",
-  "details": "You must be authenticated to access this resource.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 401,
+	"message": "Access denied. Please ensure your token is correct and active.",
+	"errors": [
+		"Full authentication is required to access this resource"
+	],
+	"timestamp": "2025-01-08T15:12:46.062818"
 }
 ```
 
@@ -62,10 +64,9 @@ Caso o token de autenticação seja inválido ou esteja ausente:
 Caso o usuário não seja o dono da empresa ou um administrador vinculado a ela:
 ```json
 {
-  "status": 403,
-  "message": "Forbidden",
-  "details": "You do not have permission to view departments of this company.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 403,
+	"message": "Access denied: You do not have permission to access this resource.",
+	"timestamp": "2025-01-08T09:59:23.658141"
 }
 ```
 
@@ -74,10 +75,9 @@ Caso o usuário não seja o dono da empresa ou um administrador vinculado a ela:
 Caso o `companyId` fornecido não corresponda a nenhuma empresa cadastrada:
 ```json
 {
-  "status": 404,
-  "message": "Company not found",
-  "details": "The company with the given ID does not exist.",
-  "timestamp": "2024-11-22T16:38:25.309715"
+	"status": 404,
+	"message": "The company with the given ID does not exist.",
+	"timestamp": "2025-01-08T15:13:57.467323"
 }
 ```
 

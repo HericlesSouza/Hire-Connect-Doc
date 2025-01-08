@@ -15,7 +15,8 @@
 - **PATCH /company/{companyId}**: Atualiza dados da empresa (restrito ao dono/admin da empresa).
     
 - **DELETE /company/{companyId}**: Deleta a empresa (restrito ao dono).
-    
+
+- **POST /company/{companyId}/admins**: Concede permissão de admin a um usuário específico para a empresa informada (restrito ao dono da empresa).
 ### Rotas Relacionadas a Departamentos
 
 - **POST /company/{companyId}/department**: Criar um novo departamento na empresa.
@@ -109,8 +110,7 @@
 
 - **Excluir Departamento**: Só é possível deletar um departamento se não houver freelancers alocados a ele. Caso contrário, uma mensagem de erro deve ser retornada.
     
-- **Movimentação entre Departamentos**: Um freelancer pode ser movido de departamento a qualquer momento pela empresa, mas deve ser notificado (via notificação ou e-mail, por exemplo) quando isso acontecer.
-    
+- **Movimentação entre Departamentos**: Um freelancer pode ser movido de departamento a qualquer momento pela empresa, mas deve ser notificado (via notificação ou e-mail, por exemplo) quando isso acontecer.    
 
 ### Considerações de Regras de Negócio - Contratos
 
@@ -120,3 +120,21 @@
 ### Considerações de Regras de Negócio - Vagas
 
 - **Requisitos de Especialização**: Cada vaga pode ter especializações desejadas para definir o perfil ideal do freelancer.
+
+
+---
+
+### **Diferenças de Ações entre DONO e ADMIN**
+
+|**Ação**|**Dono (Company)**|**Admin (Empresa)**|
+|---|---|---|
+|Criar, editar e deletar departamentos|✅ Sim|✅ Sim (com limites, como não deletar certos departamentos críticos)|
+|Criar, editar e deletar vagas|✅ Sim|✅ Sim|
+|Gerenciar funcionários da empresa|✅ Sim|✅ Sim, exceto alterar cargos do dono|
+|Alterar configurações da empresa|✅ Sim|❌ Não|
+|Excluir a empresa|✅ Sim|❌ Não|
+|Promover outros usuários a ADMIN|✅ Sim|❌ Não|
+|Revogar permissões de ADMIN|✅ Sim|❌ Não|
+|Visualizar relatórios e métricas|✅ Sim|✅ Sim|
+|Aprovar/recusar candidaturas a vagas|✅ Sim|✅ Sim|
+|Realizar ações financeiras (e.g., orçamentos, pagamentos)|✅ Sim|✅ Sim (se autorizado pelo dono)|
