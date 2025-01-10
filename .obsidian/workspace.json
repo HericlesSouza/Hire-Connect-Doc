@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Departamentos/Obter Informações de um Departamento.md",
-                "mode": "preview",
+                "file": "Departamentos/Atualizar um Departamento.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Obter Informações de um Departamento"
+              "title": "Atualizar um Departamento"
             }
           }
         ]
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 313.5
   },
   "right": {
     "id": "aacad8d9664b5b6c",
@@ -247,13 +247,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "69e3dc2d72774e4f",
+  "active": "aebff546515f3f2f",
   "lastOpenFiles": [
+    "Utilitários/Usuários/Tipos de Usuário.md",
+    "Departamentos/Atualizar um Departamento.md",
+    "Departamentos/Obter Informações de um Departamento.md",
     "Departamentos/Listar Departamentos de uma Empresa.md",
     "Departamentos/Criar Departamento.md",
-    "Departamentos/Obter Informações de um Departamento.md",
     "Sem título 1.md",
-    "Departamentos/Atualizar um Departamento.md",
     "Documento de Abertura do Projeto.md",
     "Departamentos/Deletar um Departamento.md",
     "Empresa/Conceder permissão de Admin.md",
@@ -279,7 +280,6 @@
     "Utilitários/Unidades.md",
     "API/ExtraCurricular/Routes/Candidates/GetCandidatesCTByStudentId.md",
     "API/ExtraCurricular/Routes/Candidates/GetCandidatesCT.md",
-    "API/Redacao/Routes/Correction.md",
     "ExternalDocs/HTTP",
     "Utilitários",
     "API/Setup Geral/Alocação/Rotas",
