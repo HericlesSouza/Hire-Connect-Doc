@@ -51,13 +51,15 @@ Se a atualização for bem-sucedida, a resposta conterá os dados atualizados do
   "id": "123e4567-e89b-12d3-a456-426614174999",
   "name": "Novo Nome do Departamento",
   "description": "Descrição atualizada do departamento.",
-   "company": {
+  "createdAt": "2024-11-22T16:38:25.309715",
+  "updatedAt": "2024-11-23T10:15:00.123456",
+  "company": {
 		"id": "123e4567-e89b-12d3-a456-426614174999", 
 		"name": "Empresa Exemplo",
 		"description": "contato@empresaexemplo.com",
-  },
-  "createdAt": "2024-11-22T16:38:25.309715",
-  "updatedAt": "2024-11-23T10:15:00.123456"
+		"createdAt": "2025-01-06T18:15:39.513043",
+		"updatedAt": null
+  }
 }
 ```
 
@@ -68,21 +70,22 @@ Se a atualização for bem-sucedida, a resposta conterá os dados atualizados do
 Caso o token de autenticação seja inválido ou esteja ausente:
 ```json
 {
-  "status": 401,
-  "message": "Unauthorized",
-  "details": "You must be authenticated to access this resource.",
-  "timestamp": "2024-11-23T10:15:00.123456"
-}
+	"status": 401,
+	"message": "Access denied. Please ensure your token is correct and active.",
+	"errors": [
+		"Full authentication is required to access this resource"
+	],
+	"timestamp": "2025-01-13T12:06:51.852573"
+}}
 ```
 
 #### Permissão Negada - **403 Forbidden**
 Caso o usuário não seja o dono da empresa ou um administrador vinculado a ela:
 ```json
 {
-  "status": 403,
-  "message": "Forbidden",
-  "details": "You do not have permission to update this department.",
-  "timestamp": "2024-11-23T10:15:00.123456"
+	"status": 403,
+	"message": "Access denied: You do not have permission to access this resource.",
+	"timestamp": "2025-01-13T12:07:27.342214"
 }
 ```
 
