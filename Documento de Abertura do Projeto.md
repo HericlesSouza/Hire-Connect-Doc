@@ -31,13 +31,16 @@
     
 - **GET /department/{departmentId}/freelancers**: Listar todos os freelancers que estão atualmente trabalhando em um departamento específico.
     
+- **GET /department/{departmentId}/jobVacancies**: Listar todas as vagas de emprego que estão associadas a um departamento específico.
 
-### Rotas de Interações com Freelancers
+### Rotas para Vagas de Trabalho (`job_vacancies`)
 
-- **POST /job/{jobId}/hire/{userId}**: Contrata um freelancer para aquela vaga.
+- **POST /department/{departmentId}/job**: Criar uma nova vaga de trabalho em um departamento específico.
     
-- **POST /department/{departmentId}/move/{userId}**: Move o usuário de departamento.
+- **PUT /job/{jobId}**: Atualizar dados de uma vaga específica.
     
+- **DELETE /job/{jobId}**: Desativar uma vaga, definindo o campo `is_active` como false.
+- **PATCH /job/{jobId}/activate**: Ativa uma vaga, definindo o campo `is_active` como true.
 
 ### Rotas de Usuários (Freelancers)
 
@@ -50,57 +53,14 @@
 - **PUT /user**: Atualização dos dados do perfil do freelancer. O ID do freelancer será obtido do token.
     
 - **GET /users**: Lista todos os usuários cadastrados (rota restrita a admins e company). É possível filtrar por tipo de usuário (freelancer ou admin) através de query params.
-
-
-### Rotas para Especializações
-
-- **GET /specializations**: Listar todas as especializações disponíveis.
-    
-
-### Rotas para Contratos
-
-- **GET /contracts/{companyId}**: Listar todos os contratos de uma empresa específica.
-    
-- **GET /contract/{contractId}**: Obter detalhes de um contrato específico.
-    
-- **PUT /contract/{contractId}**: Atualizar dados do contrato (ex.: datas de início, fim e status de atividade).
-    
-- **DELETE /contract/{contractId}**: Inativar um contrato.
-    
-- **GET /user/contracts**: Listar todos os contratos do usuário logado, com possibilidade de filtrar por contratos ativos ou inativos através de query params.
-    
-
+  
 ### Rotas para Aplicação de Vagas (`job_vacancies_applications`)
 
-- **PUT /job/{jobId}/application/{applicationId}/status**: Atualizar o status de uma candidatura (ex.: aceitar ou rejeitar).
-    
+- **PUT /job/{jobId}/application/{applicationId}/status**: Atualizar o status de uma candidatura (ex.: aceitar ou rejeitar).    
 
-### Rotas para Vagas de Trabalho (`job_vacancies`)
-
-- **POST /department/{departmentId}/job**: Criar uma nova vaga de trabalho em um departamento específico.
-    
-- **PUT /job/{jobId}**: Atualizar dados de uma vaga específica.
-    
-- **DELETE /job/{jobId}**: Desativar uma vaga, definindo o campo `is_active` como false.
-    
-- **POST /job/{jobId}/specializations**: Cadastrar especializações requeridas para uma vaga específica.
-    
-
-### Rotas de Gerenciamento de Freelancers Especializados
-
-- **POST /freelancer/specialization**: Adicionar uma especialização ao freelancer logado.
-    
-- **DELETE /freelancer/specialization/{specializationId}**: Remover uma especialização do freelancer logado.
-    
-- **GET /freelancer/specializations**: Listar todas as especializações do freelancer logado.
-    
-
-### Rotas para Comunicação entre Empresa e Freelancer
-
-- **GET /company/{companyId}/responses/{jobId}**: Empresa visualiza as respostas dos freelancers para uma vaga específica (aceitar ou recusar).
-    
+### Rotas para Comunicação entre Empresa e Freelancer    
 - **GET /freelancer/responses**: Freelancer visualiza todas as respostas em relação às suas candidaturas.
-    
+
 ### Considerações de Regras de Negócio - Empresa
 
 - **Cadastrar Empresa**: O usuário deve ser do tipo COMPANY.
@@ -115,11 +75,7 @@
 ### Considerações de Regras de Negócio - Contratos
 
 - **Contrato Único**: Cada contrato deve ser único e ter dados como `start_date`, `end_date` e `is_active` para controle dos períodos de trabalho.
-    
 
-### Considerações de Regras de Negócio - Vagas
-
-- **Requisitos de Especialização**: Cada vaga pode ter especializações desejadas para definir o perfil ideal do freelancer.
 
 
 ---

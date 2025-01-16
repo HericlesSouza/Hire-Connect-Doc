@@ -67,6 +67,15 @@ Se a criação for bem-sucedida, a resposta será:
 
 ### Exceções
 
+#### Erro de Regra de Negócio - **400 Bad Request**
+Caso o usuário tente criar um departamento com um nome que já existe naquela empresa:
+```json
+{
+	"status": 400,
+	"message": "A department with this name already exists in the company.",
+	"timestamp": "2025-01-16T15:19:57.673449"
+}
+```
 #### Erro de Autorização - **401 Unauthorized**
 Caso o token de autenticação seja inválido ou esteja ausente:
 ```json

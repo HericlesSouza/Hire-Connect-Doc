@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Departamentos/Deletar um Departamento.md",
+                "file": "Departamentos/Listar Vagas de Trabalho de um Departamento.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deletar um Departamento"
+              "title": "Listar Vagas de Trabalho de um Departamento"
+            }
+          },
+          {
+            "id": "592d059de36aba3b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Departamentos/Listar Vagas de Trabalho de um Departamento.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Listar Vagas de Trabalho de um Departamento"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 376.5
   },
   "right": {
     "id": "aacad8d9664b5b6c",
@@ -247,20 +262,28 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "69e3dc2d72774e4f",
+  "active": "592d059de36aba3b",
   "lastOpenFiles": [
-    "Empresa/Deletar uma Empresa.md",
-    "Departamentos/Deletar um Departamento.md",
+    "Interações com Freelancers/Contratar um Freelancer.md",
+    "Departamentos/Listar Vagas de Trabalho de um Departamento.md",
+    "Vagas de Trabalho/Criar uma Vaga de Trabalho.md",
+    "Departamentos/Listar Departamentos de uma Empresa.md",
+    "Documento de Abertura do Projeto.md",
+    "Vagas de Trabalho/Ativar uma Vaga de Trabalho.md",
+    "Vagas de Trabalho/Desativar uma Vaga de trabalho.md",
+    "Vagas de Trabalho/Atualizar uma Vaga de Trabalho.md",
     "Departamentos/Atualizar um Departamento.md",
+    "Departamentos/Criar Departamento.md",
+    "Sem título 1.md",
+    "Vagas de Trabalho",
+    "Empresa/Cadastrar uma Empresa.md",
+    "Interações com Freelancers",
+    "Departamentos/Deletar um Departamento.md",
+    "Empresa/Deletar uma Empresa.md",
     "assets/HireConnect.png",
     "Utilitários/Usuários/Tipos de Usuário.md",
     "Departamentos/Obter Informações de um Departamento.md",
-    "Departamentos/Listar Departamentos de uma Empresa.md",
-    "Departamentos/Criar Departamento.md",
-    "Sem título 1.md",
-    "Documento de Abertura do Projeto.md",
     "Empresa/Conceder permissão de Admin.md",
-    "Empresa/Cadastrar uma Empresa.md",
     "IdeiasDeImplementações.md",
     "Empresa/Atualizar Informações de Uma Empresa.md",
     "Empresa/Obter Informações de uma Empresa.md",
@@ -274,11 +297,6 @@
     "API/Matricula/Routes/Finantial/UpdateContractStudent.md",
     "API/Setup Geral/Alocação/Fluxo.canvas",
     "API/Setup Geral/Alocação/Rotas/Atualizar Cronograma Semanal.md",
-    "API/Setup Geral/Alocação/Rotas/Lista de Professores.md",
-    "API/Setup Geral/Alocação/Rotas/Substituir Alocação do Professor.md",
-    "API/Setup Geral/Alocação/Rotas/Visualizar Cronograma Semanal.md",
-    "Utilitários/Unidades.md",
-    "API/ExtraCurricular/Routes/Candidates/GetCandidatesCTByStudentId.md",
     "ExternalDocs/HTTP",
     "Utilitários",
     "API/Setup Geral/Alocação/Rotas",
@@ -295,9 +313,7 @@
     "ERP/Modules/Academic/Essay/components/Modals/Tema/assets/deleteTheme.png",
     "ERP/Modules/Academic/Essay/components/Modals/Tema/assets",
     "ERP/Modules/Academic/Essay/components/Modals/Tema",
-    "ERP/Modules/Academic/Essay/components/Modals/Aplicação",
     "ERP/Modules/Academic/Essay/Pages/Area de temas/assets/cardTheme.png",
-    "ERP/Modules/Academic/Essay/Pages/Aplicação/assets",
     "ERP/Modules/Academic/Essay/pages-flux.canvas",
     "ERP/Modules/Shared/StudentInfo/Tabs/Responsibles/Fluxograms/Page-view-flux.canvas",
     "ERP/Modules/Shared/StudentInfo/Tabs/Responsibles/Fluxograms/Flux-general-responsibles.canvas",
