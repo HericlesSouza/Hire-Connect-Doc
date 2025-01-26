@@ -40,7 +40,10 @@
 - **PUT /job/{jobId}**: Atualizar dados de uma vaga específica.
     
 - **DELETE /job/{jobId}**: Desativar uma vaga, definindo o campo `is_active` como false.
-- **PATCH /job/{jobId}/activate**: Ativa uma vaga, definindo o campo `is_active` como true.
+    
+- **PATCH /job/{jobId}/activate**: Ativa uma vaga, definindo o campo `is_active` como true. 
+    
+- **GET /job/{jobId}/candidates**: Permite listar todos os freelancers que aplicaram para uma vaga específica.
 
 ### Rotas de Usuários (Freelancers)
 
@@ -48,49 +51,13 @@
     
 - **GET /user/applications**: Lista todas as empresas para as quais o freelancer aplicou. O ID do freelancer será obtido do token. É possível filtrar pelos status da vaga.
     
-- **POST /user/respond-application/{jobId}**: Responder a uma solicitação de uma empresa (aceitar ou recusar). O ID do freelancer será obtido do token. Caso ele aceite, automaticamente cria um contrato entre o freelancer e a empresa. Parâmetros como `job_id`, `freelancer_id`, `start_date`, `end_date` e `is_active` devem ser fornecidos
-    
 - **PUT /user**: Atualização dos dados do perfil do freelancer. O ID do freelancer será obtido do token.
-    
-- **GET /users**: Lista todos os usuários cadastrados (rota restrita a admins e company). É possível filtrar por tipo de usuário (freelancer ou admin) através de query params.
   
-### Rotas para Aplicação de Vagas (`job_vacancies_applications`)
-
-- **PUT /job/{jobId}/application/{applicationId}/status**: Atualizar o status de uma candidatura (ex.: aceitar ou rejeitar).    
-
-### Rotas para Comunicação entre Empresa e Freelancer    
-- **GET /freelancer/responses**: Freelancer visualiza todas as respostas em relação às suas candidaturas.
+### Interações com o Freelancer
+- **PUT /job/{jobId}/application/{applicationId}/status**: Atualizar o status de uma candidatura (ex.: aceitar ou rejeitar).
 
 ### Considerações de Regras de Negócio - Empresa
-
 - **Cadastrar Empresa**: O usuário deve ser do tipo COMPANY.
-    
 
 ### Considerações de Regras de Negócio - Departamento
-
 - **Excluir Departamento**: Só é possível deletar um departamento se não houver freelancers alocados a ele. Caso contrário, uma mensagem de erro deve ser retornada.
-    
-- **Movimentação entre Departamentos**: Um freelancer pode ser movido de departamento a qualquer momento pela empresa, mas deve ser notificado (via notificação ou e-mail, por exemplo) quando isso acontecer.    
-
-### Considerações de Regras de Negócio - Contratos
-
-- **Contrato Único**: Cada contrato deve ser único e ter dados como `start_date`, `end_date` e `is_active` para controle dos períodos de trabalho.
-
-
-
----
-
-### **Diferenças de Ações entre DONO e ADMIN**
-
-|**Ação**|**Dono (Company)**|**Admin (Empresa)**|
-|---|---|---|
-|Criar, editar e deletar departamentos|✅ Sim|✅ Sim (com limites, como não deletar certos departamentos críticos)|
-|Criar, editar e deletar vagas|✅ Sim|✅ Sim|
-|Gerenciar funcionários da empresa|✅ Sim|✅ Sim, exceto alterar cargos do dono|
-|Alterar configurações da empresa|✅ Sim|❌ Não|
-|Excluir a empresa|✅ Sim|❌ Não|
-|Promover outros usuários a ADMIN|✅ Sim|❌ Não|
-|Revogar permissões de ADMIN|✅ Sim|❌ Não|
-|Visualizar relatórios e métricas|✅ Sim|✅ Sim|
-|Aprovar/recusar candidaturas a vagas|✅ Sim|✅ Sim|
-|Realizar ações financeiras (e.g., orçamentos, pagamentos)|✅ Sim|✅ Sim (se autorizado pelo dono)|
