@@ -23,7 +23,9 @@ Esta rota permite o registro de um novo usuário no sistema. Através do método
   "email": "joao.silva@example.com",
   "password": "senhaSegura123",
   "img_url": "https://example.com/imagens/joao.jpg",
-  "type": "FREELANCER"
+  "type": "FREELANCER",
+  "bio": "Tenho 60 anos e desenvolvo códigos",
+  "specialization": "Desenvolvedor Full Stack"
 }
 ```
 

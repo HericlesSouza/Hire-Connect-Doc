@@ -63,6 +63,7 @@ Se a listagem for bem-sucedida, a resposta conterá os detalhes das empresas e v
 ---
 
 ### Exceções
+
 #### Erro de Autorização - **401 Unauthorized**
 Caso o token de autenticação seja inválido ou esteja ausente:
 ```json
@@ -73,6 +74,26 @@ Caso o token de autenticação seja inválido ou esteja ausente:
     "Full authentication is required to access this resource"
   ],
   "timestamp": "2025-01-15T17:10:00.654321"
+}
+```
+
+#### Permissão Negada - **403 Forbidden**
+Caso o usuário autenticado não seja o dono da empresa ou um administrador vinculado à vaga:
+```json
+{
+  "status": 403,
+  "message": "Access denied: You do not have permission to access this resource.",
+  "timestamp": "2025-01-15T15:12:00.321456"
+}
+```
+
+#### Vaga Não Encontrada - **404 Not Found**
+Caso o `jobId` fornecido não corresponda a uma vaga existente:
+```json
+{
+  "status": 404,
+  "details": "The job with the given ID does not exist.",
+  "timestamp": "2025-01-15T15:13:00.987654"
 }
 ```
 

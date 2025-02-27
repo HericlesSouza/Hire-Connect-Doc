@@ -2,7 +2,7 @@
 
 ### Propriedades
 
-| endpoint  | `/job/{jobId}/application/{applicationId}/status`                                           |
+| endpoint  | `/department/:departmentId/job/:applicationId/status`                                       |
 | --------- | ------------------------------------------------------------------------------------------- |
 | método    | **PUT**                                                                                     |
 | cabeçalho | `Authorization: Bearer <token>`                                                             |
@@ -49,28 +49,18 @@ Esta rota permite que o dono da empresa ou um administrador vinculado a uma vaga
 Se a atualização do status for bem-sucedida, a resposta conterá os detalhes da candidatura atualizada:
 ```json
 {
-  "application": {
-    "id": "456e7890-a12b-34c5-d678-90fghijk1234",
-    "freelancer": {
-      "id": "123e4567-e89b-12d3-a456-426614174999",
-      "name": "João Silva",
-      "email": "joao.silva@example.com"
-    },
-    "job": {
-      "id": "789f0123-b45c-67d8-e901-234ghijk5678",
-      "title": "Desenvolvedor Backend"
-    },
-    "status": "accepted",
-    "updatedAt": "2025-01-15T19:00:00.123456"
-  },
-  "contract": {
-    "id": "98d7f123-45b6-7890-a12b-34c5d67890f1",
-    "freelancerId": "123e4567-e89b-12d3-a456-426614174999",
-    "jobId": "789f0123-b45c-67d8-e901-234ghijk5678",
-    "startDate": "2025-01-16",
-    "endDate": null,
-    "isActive": true
-  }
+	"application": {
+		"job": {
+			"id": "7cac91c6-8a31-4227-974f-7e8f0d3e097a",
+			"title": "Desenvolvedor Backend",
+			"status": "ACCEPTED"
+		},
+		"contract": {
+			"id": "b8d6e61a-883e-4394-b93a-aea2b8b3ba5b",
+			"freelancerId": "16dc61a6-92aa-411a-92c9-0ba515b71f6c",
+			"active": true
+		}
+	}
 }
 ```
 
@@ -112,14 +102,13 @@ Caso o usuário autenticado não seja o dono da empresa ou um administrador vinc
 }
 ```
 
-#### Candidatura ou Vaga Não Encontrada - **404 Not Found**
-Caso o `jobId` ou o `applicationId` fornecido não corresponda a registros existentes:
+#### Candidatura não Encontrada - **404 Not Found**
+Caso o `applicationId` fornecido não corresponda a registros existentes:
 ```json
 {
-  "status": 404,
-  "message": "Job or application not found",
-  "details": "Ensure the provided IDs are correct and exist in the system.",
-  "timestamp": "2025-01-15T19:03:00.321654"
+	"status": 404,
+	"message": "Application not found with the provided ID",
+	"timestamp": "2025-02-27T00:22:46.896784"
 }
 ```
 
@@ -141,6 +130,6 @@ Caso o valor do payload seja inválido:
 ### Notas Adicionais
 - O token JWT deve ser incluído no cabeçalho da requisição utilizando o formato `Authorization: Bearer <token>`.
 - Apenas o dono da empresa ou um administrador vinculado à vaga podem acessar esta rota.
-- Certifique-se de que os identificadores fornecidos (`jobId` e `applicationId`) sejam UUIDs válidos.
+- Certifique-se de que os identificadores fornecidos (`departmentId` e `applicationId`) sejam UUIDs válidos.
 - Quando a candidatura é aceita, um contrato é automaticamente criado no sistema com as informações do freelancer e da vaga.
 - O histórico de candidaturas será mantido no sistema para rastreabilidade.

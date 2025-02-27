@@ -2,11 +2,11 @@
 
 ### Propriedades
 
-| endpoint  | `/department/{departmentId}/freelancer/{freelancerId}` |
-| --------- | ------------------------------------------------------ |
-| método    | **DELETE**                                             |
-| cabeçalho | `Authorization: Bearer <token>`                        |
-| corpo     | Nenhum                                                 |
+| endpoint  | `/department/{departmentId}/job/freelancer/{freelancerId}` |
+| --------- | ---------------------------------------------------------- |
+| método    | **DELETE**                                                 |
+| cabeçalho | `Authorization: Bearer <token>`                            |
+| corpo     | Nenhum                                                     |
 
 ---
 
@@ -27,22 +27,10 @@ Esta rota permite demitir um freelancer de um departamento específico, desvincu
 
 ### Exemplo de Resposta
 
-#### Sucesso - `200 OK`
-
-Se a operação for bem-sucedida, a resposta conterá uma mensagem confirmando a demissão:
-
-```json
-{
-  "freelancer": {
-    "id": "123e4567-e89b-12d3-a456-426614174999",
-    "name": "João Silva",
-    "email": "joao.silva@example.com"
-  },
-  "department": {
-    "id": "987e6543-b21d-45c6-a789-654321abcdef",
-    "name": "Departamento de Desenvolvimento"
-  }
-}
+#### Sucesso - `204 No Content`
+Se a operação for bem-sucedida, a resposta será:
+```http
+204 No Content
 ```
 
 ---

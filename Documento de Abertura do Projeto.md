@@ -6,6 +6,7 @@
 - **POST /auth/login**: Login do usuário.
     
 - **GET /auth/me**: Retorna os dados do usuário logado.
+
 ### Rotas para Empresa
 
 - **POST /company**: Cadastro de uma nova empresa (restrito ao usuário tipo COMPANY).
@@ -45,13 +46,16 @@
     
 - **GET /job/{jobId}/candidates**: Permite listar todos os freelancers que aplicaram para uma vaga específica.
 
+### Rotas de Usuários
+
+- **PUT /user**: Atualização dos dados do perfil do usuário. O ID do usuário será obtido do token.
+
 ### Rotas de Usuários (Freelancers)
 
 - **POST /user/apply/{jobId}**: Freelancer solicita trabalhar em uma vaga específica. O ID do freelancer será obtido do token. O freelancer só conseguirá aplicar para uma vaga se tiver todas as especializações que a vaga requerir.
     
 - **GET /user/applications**: Lista todas as empresas para as quais o freelancer aplicou. O ID do freelancer será obtido do token. É possível filtrar pelos status da vaga.
     
-- **PUT /user**: Atualização dos dados do perfil do freelancer. O ID do freelancer será obtido do token.
   
 ### Interações com o Freelancer
 - **PUT /job/{jobId}/application/{applicationId}/status**: Atualizar o status de uma candidatura (ex.: aceitar ou rejeitar).

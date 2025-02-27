@@ -31,24 +31,19 @@ Esta rota permite listar todos os freelancers que estão atualmente trabalhando 
 Se a listagem for bem-sucedida, a resposta conterá os detalhes dos freelancers associados ao departamento:
 
 ```json
-{
-  "freelancers": [
-    {
-      "id": "123e4567-e89b-12d3-a456-426614174999",
-      "name": "João Silva",
-      "email": "joao.silva@example.com",
-      "specializations": ["Backend", "Java", "Spring Boot"],
-      "joinedAt": "2025-01-10T12:00:00.123456"
-    },
-    {
-      "id": "456e7890-e12b-34c5-d678-90fghijk4321",
-      "name": "Maria Souza",
-      "email": "maria.souza@example.com",
-      "specializations": ["Frontend", "React", "Tailwind CSS"],
-      "joinedAt": "2025-01-11T15:30:00.654321"
-    }
-  ]
-}
+[
+	{
+		"id": "13998e14-1152-4cbd-abff-d066e1290d5b",
+		"name": "João Silva",
+		"email": "joao.silva@example.com",
+		"imgUrl": "image@",
+		"typeUser": "FREELANCER",
+		"createdAt": "2025-02-12T21:23:28.291459",
+		"updatedAt": "2025-02-26T20:11:04.4444",
+		"specialization": "Desenvolvedor Full Stack",
+		"bio": "Tenho 60 anos e desenvolvo códigos"
+	}
+]
 ```
 
 ---

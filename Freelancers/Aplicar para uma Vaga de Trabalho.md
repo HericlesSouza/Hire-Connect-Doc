@@ -60,6 +60,16 @@ Caso o token de autenticação seja inválido ou esteja ausente:
 }
 ```
 
+#### Permissão Negada - **403 Forbidden**
+Caso o usuário não seja do tipo freelancer:
+```json
+{
+	"status": 403,
+	"message": "Access denied: You do not have permission to access this resource.",
+	"timestamp": "2025-01-08T09:59:23.658141"
+}
+```
+
 #### Vaga Não Encontrada - **404 Not Found**
 Caso o `jobId` fornecido não corresponda a uma vaga existente:
 ```json
@@ -70,18 +80,6 @@ Caso o `jobId` fornecido não corresponda a uma vaga existente:
 }
 ```
 
-#### Erro de Validação - **400 Bad Request**
-Caso algum parâmetro da rota seja inválido ou mal formatado:
-```json
-{
-  "status": 400,
-  "message": "Validation error",
-  "errors": [
-    "jobId: must be a valid UUID"
-  ],
-  "timestamp": "2025-01-15T17:04:00.654321"
-}
-```
 
 ---
 

@@ -50,6 +50,16 @@ Caso o `companyId` fornecido não corresponda a nenhuma empresa cadastrada:
 }
 ```
 
+#### Conflito - **409 Conflict**
+Caso a empresa tenha freelancers associados e, portanto, não possa ser deletado:
+```json
+{
+  "status": 409,
+  "message": "The department with id: `b79ce10d-9a4e-4770-bcb4-351fbba85063` has freelancers associated and cannot be deleted.",
+  "timestamp": "2024-11-23T10:15:00.123456"
+}
+```
+
 --- 
 
 ### Notas Adicionais

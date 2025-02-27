@@ -4,17 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "362ed9726ac30b12",
+        "id": "c75f365cf70ead63",
         "type": "tabs",
         "children": [
           {
-            "id": "acdc3ecaf79d3906",
+            "id": "add67f886a9952a2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nova aba"
+              "title": "README"
+            }
+          },
+          {
+            "id": "96e4e59521c80a9f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Departamentos/Deletar um Departamento.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Deletar um Departamento"
             }
           }
         ]
@@ -36,7 +54,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de arquivos"
@@ -243,38 +262,39 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "acdc3ecaf79d3906",
+  "active": "add67f886a9952a2",
   "lastOpenFiles": [
-    "DER.drawio.pdf",
     "Documento de Abertura do Projeto.md",
-    "IdeiasDeImplementações.md",
+    "Departamentos/Listar Freelancers de um Departamento.md",
+    "Departamentos/Listar Departamentos de uma Empresa.md",
+    "Empresa/Deletar uma Empresa.md",
+    "Departamentos/Deletar um Departamento.md",
     "Interações com Freelancers/Demitir Freelancer de um Departamento.md",
     "Interações com Freelancers/Atualizar status de uma Candidatura.md",
-    "Interações com Freelancers/Contratar um Freelancer.md",
-    "Departamentos/Listar Freelancers de um Departamento.md",
+    "Freelancers/Aplicar para uma Vaga de Trabalho.md",
+    "Freelancers/Listar Aplicações do Freelancer.md",
+    "README.md",
+    "DER.drawio.pdf",
+    "Autenticação/Atualizar um Usuário.md",
+    "Autenticação/Registro.md",
+    "Vagas de Trabalho/Atualizar uma Vaga de Trabalho.md",
+    "Autenticação/Login.md",
+    "Autenticação/Obter Dados do Usuário Logado.md",
+    "Vagas de Trabalho/Criar uma Vaga de Trabalho.md",
+    "Departamentos/Atualizar um Departamento.md",
+    "Departamentos/Criar Departamento.md",
+    "Empresa/Atualizar Informações de Uma Empresa.md",
+    "Empresa/Cadastrar uma Empresa.md",
+    "Utilitários/Usuários/Tipos de Usuário.md",
     "Vagas de Trabalho/Listar Candidaturas.md",
+    "IdeiasDeImplementações.md",
+    "Interações com Freelancers/Contratar um Freelancer.md",
     "assets/Sem título.md",
     "assets/Sem título",
     "Aplicação de Vagas",
     "Departamentos/Listar Vagas de Trabalho de um Departamento.md",
-    "Departamentos/Obter Informações de um Departamento.md",
-    "Departamentos/Criar Departamento.md",
-    "Autenticação/Obter Dados do Usuário Logado.md",
-    "Autenticação/Login.md",
-    "Vagas de Trabalho/Criar uma Vaga de Trabalho.md",
-    "Vagas de Trabalho/Ativar uma Vaga de Trabalho.md",
-    "Freelancers/Listar Aplicações do Freelancer.md",
-    "Freelancers/Atualizar um Freelancer.md",
-    "Freelancers/Aplicar para uma Vaga de Trabalho.md",
     "Freelancers",
-    "Sem título.md",
-    "Vagas de Trabalho/Atualizar uma Vaga de Trabalho.md",
-    "Departamentos/Listar Departamentos de uma Empresa.md",
-    "Vagas de Trabalho/Desativar uma Vaga de trabalho.md",
-    "Departamentos/Atualizar um Departamento.md",
-    "Sem título 1.md",
     "Vagas de Trabalho",
-    "Empresa/Cadastrar uma Empresa.md",
     "Interações com Freelancers",
     "assets/HireConnect.png",
     "HireConnect.png",
